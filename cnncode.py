@@ -110,6 +110,6 @@ if (max(history.history['accuracy'])) > .80 :
     model.save('model.h5')
 
 
-fh = open('/root/task3_result/accuracy.txt','w+')
+fh = open('/root/final/accuracy.txt','w+')
 fh.write (str(result.history['accuracy']))
 fh.close()
