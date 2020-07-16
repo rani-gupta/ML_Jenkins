@@ -98,15 +98,15 @@ test_set = test_datagen.flow_from_directory(
         batch_size=32,
         class_mode='binary')
 
-history=model.fit(
+result=model.fit(
         training_set,
         steps_per_epoch=300,
         epochs=15,
         validation_data=test_set,
         validation_steps=80,)
 
-print(max(history.history['accuracy']))
-if (max(history.history['accuracy'])) > .80 :
+print(max(result.history['accuracy']))
+if (max(result.history['accuracy'])) > .80 :
     model.save('model.h5')
 
 
